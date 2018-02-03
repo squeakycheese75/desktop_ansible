@@ -1,0 +1,22 @@
+mgr1 ansible_ssh_host=172.31.12.151 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+mgr2 ansible_ssh_host=172.31.12.152 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+mgr3 ansible_ssh_host=172.31.12.153 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+mgr4 ansible_ssh_host=172.31.12.154 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+mgr5 ansible_ssh_host=172.31.12.155 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+mgr6 ansible_ssh_host=172.31.12.156 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+
+[dockerhosts:children]
+docker_mgrs
+docker_wkrs
+
+[docker_mgrs]
+mgr1
+mgr2
+mgr3
+
+
+[docker_wkrs]
+mgr4
+mgr5
+mgr6
+
